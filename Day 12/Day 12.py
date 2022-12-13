@@ -59,7 +59,7 @@ def f(example):
     step = g.search(start, end)[end[0]][end[1]]
     minstep = step
     for i in range(len(m)):
-        # all 'b's are in the first column, and first column if all 'a's, so it is enough to check only for first column
+        # all 'b's are in the second column, and first column is all 'a's, so it is enough to check only for first
         j = 0
         if m[i][j] == 0:
             newstart = [i, j]
