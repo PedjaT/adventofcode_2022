@@ -82,6 +82,8 @@ def f(example):
     for k in valved:
         for j in valved:
             distances[k, j] = len(BFS_SP(valved, k, j)) - 1
+
+    # input_example case
     if len(flows) < 55:
         RESULT2 = 0
         posibilities = []
@@ -91,8 +93,7 @@ def f(example):
         # part 2 done only for puzzle input
         print('Solution for part 2 is:', 1707)
 
-    posvalve = {}
-    posvalve['AA'] = []
+    posvalve = {'AA': []}
     for v2 in positive:
         br = False
         l = BFS_SP(valved, 'AA', v2)
@@ -117,6 +118,7 @@ def f(example):
             if not br:
                 posvalve[v1].append(v2)
 
+    # puzzle_input case
     if len(flows) == 55:
         # kinda obvious with pen and paper
         print('Solution for part 1 is:',
