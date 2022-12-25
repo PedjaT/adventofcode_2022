@@ -1,4 +1,3 @@
-# reminder to improve days: 8 (takes ~15sec)
 import os
 
 days = 0
